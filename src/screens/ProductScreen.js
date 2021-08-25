@@ -1,7 +1,6 @@
 import React from "react";
-import { Row, Col, Image, ListGroup, Card, Form } from "react-bootstrap";
+import { Row, Col, Image, ListGroup, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import axios from "axios";
 import { useState, useEffect } from "react";
 import { detailProduct } from "../actions/productActions";
 import { useDispatch, useSelector } from "react-redux";
@@ -24,8 +23,6 @@ const ProductScreen = (props) => {
   const [qty, setqty] = useState(1);
   const [rating, setRating] = useState(0);
   const [comment, setComment] = useState("");
-
-  const [values, setValues] = React.useState(0);
 
   const dispatch = useDispatch(detailProduct);
 

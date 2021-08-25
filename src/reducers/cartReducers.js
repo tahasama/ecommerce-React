@@ -6,8 +6,6 @@ import {
   CART_CLEAR_ITEMS,
 } from "../constants/cartConstant";
 
-import React from "react";
-
 const cartReducer = (state = { cartItems: [] }, action) => {
   switch (action.type) {
     case CART_ADD_ITEM:

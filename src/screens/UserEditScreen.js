@@ -46,7 +46,7 @@ function UserEditScreen({ match, history }) {
         setIsAdmin(user.isAdmin);
       }
     }
-  }, [user, userId, successUpdate, history]);
+  }, [dispatch, userInfo, user, userId, successUpdate, history]);
 
   const submitHandler = (e) => {
     e.preventDefault();
