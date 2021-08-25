@@ -1,0 +1,15 @@
+main {
+  min-height: 80vh;
+}
+
+h3 {
+  padding: 1rem 0;
+}
+
+.rating span {
+  margin: 0rem;
+}
+
+#navbarScrollingDropdown:hover {
+  background-color: rgb(208, 199, 247);
+}
