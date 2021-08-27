@@ -1,6 +1,6 @@
 {
   "name": "frontend",
-  "proxy": "https://e-commerce-django-react.herokuapp.com/api/",
+  "proxy": "https://e-commerce-django-react.herokuapp.com/",        
   "version": "0.1.0",
   "private": true,
   "dependencies": {
