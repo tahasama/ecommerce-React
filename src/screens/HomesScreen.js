@@ -13,8 +13,7 @@ const HomesScreen = ({ history, location }) => {
   const dispatch = useDispatch();
   const productList = useSelector((state) => state.productList);
   const { error, loading, products, page, pages } = productList;
-  console.log("my pages yo : ", pages);
-  console.log("my page bro : ", page);
+  console.log("my products : ", products);
   let keyword = location.search;
 
   useEffect(() => {

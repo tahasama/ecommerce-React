@@ -28,7 +28,7 @@ export const listProduct =
   async (dispatch) => {
     try {
       dispatch({ type: PRODUCT_LIST_REQUEST });
-      const { data } = await axios.get(`/products${keyword}`);
+      const { data } = await axios.get(`/api/products${keyword}`);
       dispatch({ type: PRODUCT_LIST_SUCCESS, payload: data });
     } catch (error) {
       console.log("your error", error);
@@ -45,7 +45,7 @@ export const listProduct =
 export const detailProduct = (id) => async (dispatch) => {
   try {
     dispatch({ type: PRODUCT_DETAIL_REQUEST });
-    const { data } = await axios.get(`/products/${id}`);
+    const { data } = await axios.get(`/api/products/${id}`);
     dispatch({ type: PRODUCT_DETAIL_SUCCESS, payload: data });
   } catch (error) {
     console.log("your error", error);
@@ -64,7 +64,7 @@ export const listProductDetails = (id) => async (dispatch) => {
   try {
     dispatch({ type: PRODUCT_DETAIL_REQUEST });
 
-    const { data } = await axios.get(`/products/${id}`);
+    const { data } = await axios.get(`/api/products/${id}`);
 
     dispatch({
       type: PRODUCT_DETAIL_SUCCESS,
@@ -98,7 +98,7 @@ export const deleteProduct = (id) => async (dispatch, getState) => {
       },
     };
 
-    const { data } = await axios.delete(`/products/delete/${id}/`, config);
+    const { data } = await axios.delete(`/api/products/delete/${id}/`, config);
 
     dispatch({
       type: PRODUCT_DELETE_SUCCESS,
@@ -132,7 +132,7 @@ export const createProduct = () => async (dispatch, getState) => {
       },
     };
 
-    const { data } = await axios.post(`/products/create/`, {}, config);
+    const { data } = await axios.post(`/api/products/create/`, {}, config);
     dispatch({
       type: PRODUCT_CREATE_SUCCESS,
       payload: data,
@@ -166,7 +166,7 @@ export const updateProduct = (product) => async (dispatch, getState) => {
     };
 
     const { data } = await axios.put(
-      `/products/update/${product._id}/`,
+      `/api/products/update/${product._id}/`,
       product,
       config
     );
@@ -209,7 +209,7 @@ export const createProductReview =
       };
 
       const { data } = await axios.post(
-        `/products/${productId}/reviews/`,
+        `/api/products/${productId}/reviews/`,
         review,
         config
       );
@@ -232,7 +232,7 @@ export const listTopProducts = () => async (dispatch) => {
   try {
     dispatch({ type: PRODUCT_TOP_REQUEST });
 
-    const { data } = await axios.get(`/products/top/`);
+    const { data } = await axios.get(`/api/products/top/`);
 
     dispatch({
       type: PRODUCT_TOP_SUCCESS,
