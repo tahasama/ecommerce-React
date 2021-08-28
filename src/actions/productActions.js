@@ -65,6 +65,8 @@ export const listProductDetails = (id) => async (dispatch) => {
     dispatch({ type: PRODUCT_DETAIL_REQUEST });
 
     const { data } = await axios.get(`/api/products/${id}`);
+    // const { imagy } = await axios.get(`/media/${data.image.id}`);
+    console.log("9999999999999999999", data);
 
     dispatch({
       type: PRODUCT_DETAIL_SUCCESS,
