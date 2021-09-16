@@ -22,7 +22,7 @@ const HomesScreen = ({ history, location }) => {
   }, [dispatch, keyword]);
   return (
     <div>
-      <FetchRandomUser />
+      {/* <FetchRandomUser /> */}
       {!keyword && <ProductCarousel />}
       <h1>Latest Products</h1>
       {loading ? (

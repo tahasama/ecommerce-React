@@ -5,10 +5,13 @@ import Rating from "@material-ui/lab/Rating";
 import Box from "@material-ui/core/Box";
 
 const Product = ({ product }) => {
+  const imagUrl = "https://e-commerce-django-react.herokuapp.com";
   return (
     <Card className="my-3 p-3 rounded">
       <Link to={`/product/${product._id}`}>
         <Card.Img src={product.image} />
+        {/* <Card.Img src="https://e-commerce-django-react.herokuapp.com/media/"${product.image} /> */}
+        <Card.Img src={`${imagUrl}${product.image}`} />
       </Link>
       <Card.Body>
         <Link to={`/product/${product._id}`}>
