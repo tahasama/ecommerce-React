@@ -8,7 +8,6 @@ import { useDispatch, useSelector } from "react-redux";
 import Message from "../components/Message";
 import Paginate from "../components/paginate";
 import ProductCarousel from "../components/ProductCarousel";
-import FetchRandomUser from "../components/FetchRandomUser";
 
 const HomesScreen = ({ history, location }) => {
   const dispatch = useDispatch();
@@ -22,7 +21,6 @@ const HomesScreen = ({ history, location }) => {
   }, [dispatch, keyword]);
   return (
     <div>
-      {/* <FetchRandomUser /> */}
       {!keyword && <ProductCarousel />}
       <h1>Latest Products</h1>
       {loading ? (
