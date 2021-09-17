@@ -9,8 +9,6 @@ const Product = ({ product }) => {
   return (
     <Card className="my-3 p-3 rounded">
       <Link to={`/product/${product._id}`}>
-        <Card.Img src={product.image} />
-        {/* <Card.Img src="https://e-commerce-django-react.herokuapp.com/media/"${product.image} /> */}
         <Card.Img src={`${imagUrl}${product.image}`} />
       </Link>
       <Card.Body>
